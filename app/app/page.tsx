@@ -27,7 +27,13 @@ export default function Home() {
             value={number}
             onChange={(e) => setNumber(Number.parseInt(e.target.value))}
           />
-          <button className="btn" onClick={() => setNumber(0)}>
+          <button
+            className="btn"
+            onClick={() => {
+              setNumber(0);
+              setResult(0);
+            }}
+          >
             Clear
           </button>
         </div>
