@@ -20,16 +20,27 @@ export default function Home() {
   return (
     <div className="bg-sky-50 min-h-screen p-3 flex items-center justify-center">
       <div className="bg-white rounded-md border border-sky-300 p-3 flex flex-col gap-3">
-        <input
-          type="text"
-          className="input"
-          value={number}
-          onChange={(e) => setNumber(Number.parseInt(e.target.value))}
-        />
+        <div className="flex flex-row gap-3">
+          <input
+            type="text"
+            className="input"
+            value={number}
+            onChange={(e) => setNumber(Number.parseInt(e.target.value))}
+          />
+          <button className="btn" onClick={() => setNumber(0)}>
+            Clear
+          </button>
+        </div>
         <button className="btn" onClick={handleClick}>
           Calculate
         </button>
-        <input type="text" className="input" value={result} readOnly />
+        <input
+          type="text"
+          className="input"
+          value={result}
+          readOnly
+          onClick={() => navigator.clipboard.writeText(result)}
+        />
       </div>
     </div>
   );
