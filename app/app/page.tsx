@@ -39,7 +39,7 @@ export default function Home() {
           className="input"
           value={result}
           readOnly
-          onClick={() => navigator.clipboard.writeText(result)}
+          onClick={() => navigator.clipboard.writeText(result.toString())}
         />
       </div>
     </div>
