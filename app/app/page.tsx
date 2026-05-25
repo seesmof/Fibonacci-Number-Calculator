@@ -22,7 +22,7 @@ export default function Home() {
       <div className="bg-white rounded-md border border-sky-300 p-3 flex flex-col gap-3">
         <div className="flex flex-row gap-3">
           <input
-            type="text"
+            type="number"
             className="input"
             value={number}
             onChange={(e) => setNumber(Number.parseInt(e.target.value))}
@@ -42,7 +42,7 @@ export default function Home() {
         </button>
         <input
           type="text"
-          className="input"
+          className="input bg-stone-50"
           value={result}
           readOnly
           onClick={() => navigator.clipboard.writeText(result.toString())}
